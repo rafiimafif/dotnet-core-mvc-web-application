@@ -3,8 +3,8 @@
 
 body {
   text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
   -moz-font-feature-settings: 'liga' on;
+  font-feature-settings: 'liga' on;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: $letter-spacing;

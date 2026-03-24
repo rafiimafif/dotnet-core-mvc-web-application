@@ -21662,8 +21662,8 @@ button.list-group-item-gray.active {
 }
 body {
   text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
   -moz-font-feature-settings: "liga" on;
+  font-feature-settings: "liga" on;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.15px;
