@@ -10,6 +10,11 @@
    </a>
 </h1>
 
+<p align="center">
+  <img src="https://github.com/rafiimafif/aspnet-core-mvc/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+  <img src="https://github.com/rafiimafif/aspnet-core-mvc/actions/workflows/cd.yml/badge.svg" alt="CD Status" />
+</p>
+
 <p align="center">Most Powerful & Comprehensive Free Bootstrap 5 .Net Core MVC Admin Dashboard Template built for developers!</p>
 
 ![GitHub](https://img.shields.io/github/license/themeselection/materio-bootstrap-html-aspnet-core-mvc-admin-template-free) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/themeselection/materio-bootstrap-html-aspnet-core-mvc-admin-template-free) ![GitHub issues](https://img.shields.io/github/issues/themeselection/materio-bootstrap-html-aspnet-core-mvc-admin-template-free) ![GitHub closed issues](https://img.shields.io/github/issues-closed/themeselection/materio-bootstrap-html-aspnet-core-mvc-admin-template-free) ![Twitter Follow](https://img.shields.io/twitter/follow/Theme_Selection?style=social)
@@ -23,6 +28,52 @@ If you’re a developer looking for the most Powerful & comprehensive [**Free Bo
 Build premium quality applications with ease. Use our innovative [Aspnet Core MVC Bootstrap admin template](https://themeselection.com/item/category/asp-net-dashboard/) to create eye-catching, high-quality WebApps. Your apps will be completely responsive, ensuring they’ll look stunning and function flawlessly on desktops, tablets, and mobile devices.
 
 [View Demo](https://demos.themeselection.com/materio-aspnet-core-mvc-admin-template-free/html/)
+
+---
+
+## 🏗️ Architecture & CI/CD Flow
+
+This project is transformed into a modern DevOps powerhouse with a fully automated pipeline that ensures code quality, security, and seamless container delivery.
+
+```mermaid
+graph TD
+    A[👨‍💻 Developer Push] --> B{Branch Check}
+    B -->|All Branches| C[🛠️ .NET Build & Test]
+    C --> D[🔍 SonarCloud Scan]
+    D --> E[🛡️ Trivy Security Scan]
+    B -->|Main/Master| F[🐳 Build Multi-stage Image]
+    F --> G[📦 Push to GHCR]
+    G --> H[🚀 Ready for AWS Deploy]
+```
+
+---
+
+## 🛠️ DevOps Tech Stack
+
+| Category | Technology |
+|---|---|
+| **CI/CD** | GitHub Actions |
+| **Containerization** | Docker (Optimized Multi-stage) |
+| **Reverse Proxy** | Nginx |
+| **IaC** | Terraform |
+| **Infrastructure** | AWS (VPC, EC2, SG) |
+| **Code Quality** | SonarCloud |
+| **Security** | Trivy Vulnerability Scanner |
+| **Registry** | GitHub Container Registry (GHCR) |
+
+---
+
+## 🔐 Required Secrets
+
+To replicate this setup, add these secrets to your GitHub repository (**Settings → Secrets and variables → Actions**):
+
+| Secret | Description |
+|---|---|
+| `SONAR_TOKEN` | Auth token from SonarCloud |
+| `SONAR_ORGANIZATION` | Your SonarCloud Org ID |
+| `SONAR_PROJECT_KEY` | Your SonarCloud Project Key |
+
+---
 
 ## Installation ⚒️
 
@@ -193,3 +244,18 @@ If you want to [Download Free Admin Templates](https://themeselection.com/item/c
 - [Instagram](https://www.instagram.com/themeselection/)
 - [Discord](https://discord.gg/kBHkY7DekX)
 - [YouTube](https://www.youtube.com/channel/UCuryo5s0CW4aP83itLjIdZg)
+
+---
+
+## 🛠️ Author
+
+**Rafii Mafif** — DevOps Engineer
+- 🐙 **GitHub**: [@rafiimafif](https://github.com/rafiimafif)
+
+## 🤝 Acknowledgements
+
+Special thanks to **[ThemeSelection](https://themeselection.com/)** for providing the [Materio Free ASP.NET Core MVC Admin Template](https://themeselection.com/item/materio-free-aspnet-core-mvc-admin-template/) which served as the foundation for this DevOps project.
+
+---
+
+> ⭐ If you found this helpful, consider starring the repo!
