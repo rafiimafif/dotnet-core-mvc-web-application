@@ -46,6 +46,14 @@ graph TD
     G --> H[🚀 Ready for AWS Deploy]
 ```
 
+### ❓ Why Separate CI & CD?
+
+In this professional DevOps architecture, we separate **Continuous Integration** (`ci.yml`) and **Continuous Deployment** (`cd.yml`) for three critical reasons:
+
+1.  **Trigger Specificity**: CI runs on every push and PR to catch bugs immediately. CD only runs on `main` to ensure we only ship stable, reviewed code.
+2.  **Security & Permissions**: CD requires write-access to the Container Registry (GHCR), while CI only needs read-access for builds and scans. This follows the **Principle of Least Privilege**.
+3.  **Efficiency**: If a security scan or test fails in the CI stage, the CD pipeline is never triggered, preventing broken or vulnerable images from ever reaching your production registry.
+
 ---
 
 ## 🛠️ DevOps Tech Stack
